@@ -2,7 +2,7 @@ package StringsExercises;
 
 public class CammelCaseConverter {
     public static void main(String[] args) {
-        String str = toCamelCase("the_Stealth_Warrior");
+        String str = toCamelCase("the-stealth_warrior");
         System.out.println(str);
     }
     public static String toCamelCase(String s){
@@ -20,13 +20,5 @@ public class CammelCaseConverter {
             i++;
         }
         return result;
-    }
-    public static String toCamelCase2(String s) {
-        String[] words = s.split("[-_]");
-        for (int i = 1; i < words.length; i++) {
-            char c = words[i].charAt(0);
-            char upperChar = Character.toUpperCase(c);
-            words[i].replaceFirst(c, upperChar);
-        }
     }
 }
