@@ -1,6 +1,8 @@
 package LoopingExercises;
 
-public class DontGiveMeFive {  //criar uma função que conte quantos números dentro de um intervalo não possuem '5'
+public class DontGiveMeFive {
+    //criar uma função que conte quantos números dentro de um intervalo não possuem '5'
+    //ex. de números não considerados: 5, 15, 50, 51, 52
     public static void main(String[] args) {
         int n = dispensarCincos(1, 55);
         System.out.println(n);

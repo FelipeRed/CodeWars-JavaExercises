@@ -1,7 +1,9 @@
 package Encryption;
 
-public class AlternatingSplit {  //fazer uma função que criptografe uma string concatenado todas as letras em posições
-    //ímpares com todas as letras em posições pares por N vezes  ==> ("012345" N=1) = "135024"
+public class AlternatingSplit {
+    //fazer uma função que criptografe uma string concatenado todas as letras em posições ímpares com todas as letras
+    //em posições pares por N vezes
+    //ex.: ("012345" N=1) == "135024"
     //também fazer uma função que faça o processo inverso
     public static void main(String[] args) {
         String x = encrypt("012345", 2);  //resultado esperado: "304152"

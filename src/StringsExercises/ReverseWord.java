@@ -1,6 +1,8 @@
 package StringsExercises;
 
-public class ReverseWord {  //criar uma função que inverta cada palavra de uma string, mas mantendo a ordem das palavras
+public class ReverseWord {
+    //criar uma função que inverta cada palavra de uma string, mas mantendo a ordem das palavras
+    //ex.: "Eu me chamo Felipe" == "uE em omahc epileF"
     public static void main(String[] args) {
         String s = reverseWords("Oi tudo bem com você?");
         System.out.println(s);

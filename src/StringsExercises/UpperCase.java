@@ -1,10 +1,10 @@
 package StringsExercises;
 
-public class UpperCase {  //criar uma função que transforme a primeira letra de cada palavra de uma String em maiúscula
+public class UpperCase {
+    //criar uma função que transforme a primeira letra de cada palavra de uma String em maiúscula
     public static void main(String[] args) {
-        String frase = "esta é uma frase teste."; //resultado esperado: "Esta É Uma Frase Teste."
-        frase = captalizeWords(frase);
-        System.out.println(frase);
+        String frase = "esta é uma frase teste.";
+        System.out.println(captalizeWords(frase));
     }
     public static String captalizeWords(String str) {
         String result = "";

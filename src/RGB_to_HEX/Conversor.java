@@ -2,9 +2,11 @@ package RGB_to_HEX;
 
 import java.util.ArrayList;
 
-public class Conversor {  //criar uma função que recebe o código RGB em decimal e retornal em Hexadecimal com 6 letras
+public class Conversor {
+    //criar uma função que recebe o código RGB em decimal e retornal uma String em Hexadecimal com 6 letras
+    //ex.: (75, 15, 255) == "4B0FFF"
     public static void main(String[] args) {
-        String hex = rgb(111, 222, 117);
+        String hex = rgb(255, 100, 22);
         System.out.println(hex);
     }
     public static String rgb(int r, int g, int b) {
@@ -12,8 +14,7 @@ public class Conversor {  //criar uma função que recebe o código RGB em decim
         Object[] hex = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'};
         ArrayList<Integer> valores = new ArrayList<>();
 
-        for (int i = 0; i < rgb.length; i++) {
-            int n = rgb[i];
+        for (int n : rgb) {
             if (n < 0) {
                 n = 0;
             } else if (n > 255) {
@@ -26,9 +27,8 @@ public class Conversor {  //criar uma função que recebe o código RGB em decim
         }
 
         String str = "";
-        for (int j = 0; j < valores.size(); j++) {
-            int x = valores.get(j);
-            str += hex[x];
+        for (int v : valores) {
+            str += hex[v];
         }
         return str;
     }
