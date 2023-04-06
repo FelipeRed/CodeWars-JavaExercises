@@ -1,4 +1,4 @@
-package StringsExercises;
+package kyu6;
 
 public class CammelCaseConverter {
     //fazer uma função que transforme a primeira letra depois de um '-' ou '_' em maiúscula e tire os '-' e '_'

@@ -1,4 +1,4 @@
-package MissingTermPA;
+package kyu6;
 
 public class MissingTerm {
     //criar uma função que encontre o termo faltando em uma PA

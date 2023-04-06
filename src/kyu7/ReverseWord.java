@@ -1,4 +1,4 @@
-package StringsExercises;
+package kyu7;
 
 public class ReverseWord {
     //criar uma função que inverta cada palavra de uma string, mas mantendo a ordem das palavras
@@ -21,7 +21,7 @@ public class ReverseWord {
                 char c = element.charAt(j);
                 result += c;
             }
-            if (i != words.length-1) {
+            if (i != words.length-1) {  //se não for a última palavra
                 result += " ";
             }
         }

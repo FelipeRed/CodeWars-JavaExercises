@@ -1,4 +1,4 @@
-package StringsExercises;
+package kyu7;
 
 public class UpperCase {
     //criar uma função que transforme a primeira letra de cada palavra de uma String em maiúscula

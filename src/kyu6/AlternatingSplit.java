@@ -1,4 +1,4 @@
-package Encryption;
+package kyu6;
 
 public class AlternatingSplit {
     //fazer uma função que criptografe uma string concatenado todas as letras em posições ímpares com todas as letras

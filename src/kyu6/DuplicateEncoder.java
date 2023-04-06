@@ -1,4 +1,4 @@
-package StringsExercises;
+package kyu6;
 
 public class DuplicateEncoder {
     //criar uma função que substitua as letras repetidas de uma string por ")" e as que não se repetirem por "("

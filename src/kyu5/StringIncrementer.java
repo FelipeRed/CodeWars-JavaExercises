@@ -1,4 +1,4 @@
-package StringsExercises;
+package kyu5;
 
 public class StringIncrementer {
     //fazer uma função que incremente o valor ao final de uma string

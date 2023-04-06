@@ -1,4 +1,4 @@
-package LoopingExercises;
+package kyu7;
 
 public class DontGiveMeFive {
     //criar uma função que conte quantos números dentro de um intervalo não possuem '5'

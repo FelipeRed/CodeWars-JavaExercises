@@ -1,4 +1,4 @@
-package RGB_to_HEX;
+package kyu5;
 
 import java.util.ArrayList;
 
