@@ -1,7 +1,5 @@
 package kyu4;
-
-public class CatchingNumbers {
-    /*
+/*
     Fazer uma função que dado um input N retorne 0 se o input não for "interessante", 1 se (N+1 ou N+2) for
     "interessante", e 2 se N for "interessante".
     N sempre será maior que 0 e menor que 1.000.000.
@@ -15,6 +13,8 @@ public class CatchingNumbers {
         - palíndromos (121, 11311)
         - ser igual a um dos números fornecidos dentro do array int[] awesomePhrases
      */
+
+public class CatchingNumbers {
     public static int iteration = 0;
     public static void main(String[] args) {
         int i = isInteresting(1335, new int[]{1337, 256});
