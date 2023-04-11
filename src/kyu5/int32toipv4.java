@@ -1,50 +1,48 @@
 package kyu5;
-
+/*
+Criar uma função que receba um int32 e retorne o ip equivalente a esse valor
+ */
 public class int32toipv4 {  //incompleto
     public static void main(String[] args) {
-//        String s = longToIP("128.32.10.1");
-//        System.out.println(s);
+        String s = longToIP(2154959208L);
+        System.out.println(s);
     }
     public static String longToIP(long ip) {
-        // Java doesn't have uint32, so here we use long to represent int32
-        String s = Long.toString(ip);
-        String[] ip_splited = s.split(".");
-
-        for (int i = 0; i < ip_splited.length; i++) {
-            String binary = binary_converter(ip_splited[i]);
-            ip_splited[i] = binary;
+        // Java não tem uint32, então será utilizado long para representar um int32
+        if (ip == 0) {
+            return "0.0.0.0";
         }
 
-        long sum = 0;
-        for (int i = 0; i < ip_splited.length; i++) {
-            String str = ip_splited[i];
-            for (int j = str.length()-1; j >= 0; j++) {
+        String binary_str = Long.toBinaryString(ip);
+
+        String[] splited_ip = new String[4];
+        for (int i = 0; i < 4; i++) {
+            String buffer = "";
+            for (int j = 0; j < 8; j++) {
+                char c = binary_str.charAt(j);
+                buffer += c;
+            }
+            splited_ip[i] = buffer;
+            binary_str = binary_str.replaceFirst(buffer, "");
+        }
+
+        String ipv4 = "";
+        for (int i = 0; i < splited_ip.length; i++) {
+            String str = splited_ip[i];
+            long sum = 0;
+            int potencia = 0;
+            for (int j = str.length()-1; j >= 0; j--) {
                 long l = Character.getNumericValue(str.charAt(j));
-                sum += Math.pow((l*2),i);
+                if (l == 1) {
+                    sum += Math.pow(2, potencia);
+                }
+                potencia++;
+            }
+            ipv4 += Long.toString(sum);
+            if (i != 3) {
+                ipv4 += '.';
             }
         }
-
-        return Long.toString(sum);
-    }
-    public static String binary_converter(String str) {
-        long l_buffer = Long.parseLong(str);
-        String binary = "";
-        while (l_buffer >= 2) {
-            long resto = l_buffer % 2;
-            l_buffer = l_buffer / 2;
-            binary += resto;
-        }
-        binary += l_buffer;
-
-        String bin = new StringBuilder(binary).reverse().toString();
-        if (bin.length() < 8) {
-            int n = 8 - bin.length();
-            String zeroes = "";
-            for (int i = 0; i < n; i++) {
-                zeroes += '0';
-            }
-            bin = zeroes + bin;
-        }
-        return bin;
+        return ipv4;
     }
 }
